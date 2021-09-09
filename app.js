@@ -14,8 +14,10 @@
       $scope.error = "oops could not fetch the data..."
     }
 
-    $http.get(`https://api.github.com/users/robconery`)
+    $scope.search = function(username){
+      $http.get(`https://api.github.com/users/${username}`)
       .then(onUserComplete, onError)
+    }
 
     $scope.message = 'Hello Angular!'
 
