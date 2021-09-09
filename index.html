@@ -33,6 +33,20 @@
     </ul>
   </div>
 
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Stars</th>
+      <th>Language</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="repo in repos">
+        <td>{{repo.name}}</td>
+        <td>{{repo.language}}</td>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 
 </html>

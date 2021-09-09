@@ -8,9 +8,17 @@
 
     var onUserComplete = function (response) {
       $scope.user = response.data;
+      $http.get($scope.user.repos_url)
+        .then(onRepos, onError)
     }
 
-    var onError = function (response) {
+    var onRepos = function(response){
+
+      $scope.repos = response.data
+      console.log('repos', $scope.repos);
+    }
+
+    var onError = function (reason) {
       $scope.error = "oops could not fetch the data..."
     }
 
