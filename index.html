@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app=githubViewer>
+<html lang="en" ng-app="githubViewer">
 
 <head>
   <meta charset="UTF-8">
@@ -13,6 +13,19 @@
 </head>
 
 <body ng-controller="MainController">
+  <h1>{{message.toUpperCase()}}</h1>
+  <h1>{{message.length}}</h1>
+
+  <div>{{error}}</div>
+
+  <div>
+    <h3>Person Object:</h3>
+    <ul>
+      <li>{{user.name}}</li>
+      <li>{{user.location}}</li>
+      <img src="{{user.avatar_url}}" alt="">
+    </ul>
+  </div>
 
 </body>
 
